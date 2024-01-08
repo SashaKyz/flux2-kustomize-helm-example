@@ -2,7 +2,9 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
   - ../base/podinfo
+  - ../base/motion-web
+  - ../base/motion-api
 patches:
-  - path: podinfo-values.yaml
+  - path: environment-values.yaml
     target:
       kind: HelmRelease
